@@ -42,6 +42,10 @@ A soja foi usada como exemplo (ajuste para a cultura da sua Fase 1, se for outra
 | Relé azul | GPIO 13 (IN), VIN, GND | Bomba d'água |
 | LED azul + 220 Ω | GPIO 4 | Indicador visual da bomba |
 
+
+<img width="921" height="583" alt="Image" src="https://github.com/user-attachments/assets/0b1b570c-d665-4aa2-8d57-e86883e17d6f" />
+<img width="1415" height="1083" alt="Image" src="https://github.com/user-attachments/assets/ee78360a-1409-410c-8165-2cbd187793a7" />
+
 ## 4. Lógica de decisão da bomba
 
 Avaliada nesta ordem (a primeira regra que se aplica vence):
