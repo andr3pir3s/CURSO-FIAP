@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "author": "Grupo FarmTech Solutions",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-pushbutton", "id": "btnN", "top": -120, "left": -150, "attrs": { "color": "green", "label": "N" } },
+    { "type": "wokwi-pushbutton", "id": "btnP", "top": -50, "left": -150, "attrs": { "color": "green", "label": "P" } },
+    { "type": "wokwi-pushbutton", "id": "btnK", "top": 20, "left": -150, "attrs": { "color": "green", "label": "K" } },
+    { "type": "wokwi-photoresistor-sensor", "id": "ldr1", "top": 140, "left": -200, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -120, "left": 260, "attrs": {} },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": 150, "left": 260, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": 60, "left": 260, "attrs": { "color": "blue" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 110, "left": 230, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+
+    [ "btnN:1.l", "esp:D25", "green", [ "h0" ] ],
+    [ "btnN:2.l", "esp:GND.1", "black", [ "h0" ] ],
+    [ "btnP:1.l", "esp:D26", "green", [ "h0" ] ],
+    [ "btnP:2.l", "esp:GND.1", "black", [ "h0" ] ],
+    [ "btnK:1.l", "esp:D27", "green", [ "h0" ] ],
+    [ "btnK:2.l", "esp:GND.1", "black", [ "h0" ] ],
+
+    [ "ldr1:VCC", "esp:3V3", "red", [ "h0" ] ],
+    [ "ldr1:GND", "esp:GND.1", "black", [ "h0" ] ],
+    [ "ldr1:AO", "esp:D34", "orange", [ "h0" ] ],
+
+    [ "dht1:VCC", "esp:3V3", "red", [ "h0" ] ],
+    [ "dht1:GND", "esp:GND.2", "black", [ "h0" ] ],
+    [ "dht1:SDA", "esp:D15", "yellow", [ "h0" ] ],
+
+    [ "relay1:VCC", "esp:VIN", "red", [ "h0" ] ],
+    [ "relay1:GND", "esp:GND.2", "black", [ "h0" ] ],
+    [ "relay1:IN", "esp:D13", "blue", [ "h0" ] ],
+
+    [ "esp:D4", "r1:1", "blue", [ "h0" ] ],
+    [ "r1:2", "led1:A", "blue", [ "h0" ] ],
+    [ "led1:C", "esp:GND.2", "black", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
