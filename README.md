@@ -98,3 +98,6 @@ O script usa só a biblioteca padrão do Python. Envio automático (opcional, o 
 2. Execute `Rscript r/analise_irrigacao.R` (só R base, nenhum pacote extra). Sem o arquivo, o script usa dados simulados de demonstração.
 
 O que ele faz: estatística descritiva e correlações; **teste t unilateral** (H0: umidade média ≥ 60 % vs H1: < 60 %, α = 5 %) sobre as últimas 10 leituras; **regressão linear** da tendência de secagem; combinação com as regras de pH, P, K e chuva; comparação (tabela de concordância) entre a decisão do ESP32 e a do R; e o gráfico `grafico_irrigacao.png`.
+
+
+link do vídeo demonstrativo: https://youtu.be/oLiSLbZuDRY
